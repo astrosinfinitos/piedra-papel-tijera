@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piedra papel tijera</title>
+  <link rel="stylesheet" href="./index.css">
+  <script type="module" src="./index.js"></script>
+</head>
+<body>
+  <!--Este container nos permite albergar toda la app dentro del dom-->
+  <div class="container">
+    <h1>Piedra, papel, tijera</h1>
+    <div class="player">
+      <!--Cargamos todas las imagenes de la carpeta public para que el usuario las vea-->
+      <button class="rock"><img src="images/rock.png" alt="Piedra"></button>
+      <button class="paper"><img src="images/paper.png" alt="Papel"></button>
+      <button class="scissors"><img src="images/scissors.png" alt="Tijeras"></button>
+    </div>
+    <div class="cpu"> <!-- Aquí aunque no haya imagenes, las cargamos utilizando JS  -->
+      <img src="" alt="">
+    </div>
+    <hr>
+    <div class="result">
+      <!--Mostramos el resultado utilizando JS-->
+    </div>
+  </div>
+</body>
+</html>
