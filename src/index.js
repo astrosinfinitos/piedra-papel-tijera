@@ -54,34 +54,15 @@ function chooseCPUOption(){ /*Esta funcion selecciona la imagen de lo que haya e
 function show(){ /*Esta función contempla todas las opciones disponibles del juego, pero es muy larga. ¿Puedes reducirla?*/
     let gameResult; 
     //Caso de empate
-    if(cpuSelection === playerSelection){ /*Caso de empate*/
+    if(cpuSelection === playerSelection){ 
         result.textContent = `Has empatado`;
-    }
-    else if (playerSelection == 'rock'){ /*Opciones de la piedra*/
-        if(cpuSelection == 'paper'){
-            result.textContent = `Perdiste :(`;
-        }
-        else if(cpuSelection == 'scissors'){
-            result.textContent = `Ganaste :)`;
-        }
-    }
-    else if (playerSelection == 'paper'){ /*Opciones del papel*/
-        if(cpuSelection == 'rock'){
-            result.textContent = `Ganaste :)`;
-        }
-        else if(cpuSelection == 'scissors'){
-            result.textContent = `Perdiste :(`;
-        }
-    }
-    else if (playerSelection == 'scissors'){ /*Opciones de las tijeras*/
-        if(cpuSelection == 'rock'){
-            result.textContent = `Perdiste :(`;
-        }
-        else if(cpuSelection == 'paper'){
-            result.textContent = `Ganaste :)`;
-        }
-    }
+    } else if(playerSelection == 'scissors' && cpuSelection=='paper' || playerSelection == 'paper' && cpuSelection=='rock' || playerSelection == 'rock' && cpuSelection=='scissors'){
+            result.textContent = `Has ganado`;
+      }else{
+        result.textContent = `Has perdido`;
+       }
 }
+
 
 function resetBorder(){ /*Esta función quitará los estilos de los botones */
     paperButton.classList.remove('selected');
